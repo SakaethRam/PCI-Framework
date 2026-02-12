@@ -3,6 +3,7 @@
   "fields": {
     "contract": {
       "type": "object",
+      "title": "PCI Framework: Tree Dataset Item",
       "description": "Enterprise SLA & governance metadata"
     },
     "version": {
