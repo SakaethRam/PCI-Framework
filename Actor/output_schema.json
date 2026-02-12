@@ -1,54 +1,39 @@
 {
-  "title": "CONVEXA Output Schema",
+  "title": "PCI Framework: Enterprise Tree Output",
   "type": "object",
-  "description": "Chatbot-ready JSON generated from website FAQs by CONVEXA.",
+  "schemaVersion": 1,
   "properties": {
-    "generator": {
-      "type": "string",
-      "description": "Generator name",
-      "enum": ["CONVEXA"]
+    "contract": {
+      "type": "object"
+    },
+    "version": {
+      "type": "string"
     },
     "type": {
       "type": "string",
-      "description": "Conversation structure type",
-      "enum": ["flat", "tree"]
+      "enum": ["tree"]
     },
-
-    "faqs": {
-      "type": "array",
-      "description": "Flat FAQ output (when type=flat)",
-      "items": {
-        "type": "object",
-        "properties": {
-          "question": { "type": "string" },
-          "answer": { "type": "string" }
-        },
-        "required": ["question", "answer"]
-      }
+    "generatedAt": {
+      "type": "string"
     },
-
+    "metadata": {
+      "type": "object"
+    },
+    "conversation": {
+      "type": "object"
+    },
     "nodes": {
       "type": "object",
-      "description": "Tree-based chatbot flow (when type=tree)",
-      "additionalProperties": {
-        "type": "object",
-        "properties": {
-          "message": { "type": "string" },
-          "options": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "text": { "type": "string" },
-                "next": { "type": "string" }
-              },
-              "required": ["text", "next"]
-            }
-          }
-        },
-        "required": ["message", "options"]
-      }
+      "description": "Conversation tree nodes indexed by node ID."
     }
   },
-  "required": ["generator", "type"]
+  "required": [
+    "contract",
+    "version",
+    "type",
+    "generatedAt",
+    "metadata",
+    "conversation",
+    "nodes"
+  ]
 }
