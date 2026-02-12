@@ -166,7 +166,7 @@ Your project should contain:
 {
   "name": "precision-contract-intent-framework",
   "title": "PCI Framework: FAQ to Chatbot Conversation Flow Generator",
-  "description": "Enterprise-graded deterministic FAQ and navigation tree extractor for conversational AI systems. Automatically converts website FAQs & Scraped data into chatbot-ready JSON conversation flows. Supports flat and tree-based outputs for rule-based or hybrid chatbots.",
+  "description": "Automatically converts website FAQs & Scraped data into chatbot-ready JSON conversation flows.",
   "version": "0.0.1",
   "buildTag": "latest",
   "meta": {
